@@ -1,0 +1,124 @@
+/* Footer styles */
+.wooks-footer {
+  position: relative;
+
+  &__wrap {
+    position: relative;
+
+    &:before {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: var(--color-blue-gray);
+      opacity: 0.1;
+    }
+  }
+
+  &__grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 5fr 3fr 4fr;
+
+    @include media-breakpoint-down(mb) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__logo {
+    height: 69px;
+    width: 77px;
+  }
+
+  &__logo-img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+  }
+
+  &__description {
+
+    @include media-breakpoint-down(mb) {
+      padding-right: 0 !important;
+      padding-bottom: 40px !important;
+    }
+  }
+
+  &__links-title {
+
+    @include media-breakpoint-down(mb) {
+      margin-top: 0 !important;
+    }
+  }
+
+  &__contact {
+
+    @include media-breakpoint-down(mb) {
+      padding-bottom: 64px !important;
+    }
+  }
+
+  &__contact-title {
+
+    @include media-breakpoint-down(mb) {
+      margin-top: 24px !important;
+    }
+  }
+
+  &__contact-method {
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+  }
+
+  &__cta {
+    transition: 500ms ease-in-out;
+
+    &:hover {
+      color: var(--color-brand-blue) !important;
+    }
+  }
+
+  &__copyright {
+    position: relative;
+
+    &:before {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-blue-gray);
+      opacity: 0.1;
+    }
+  }
+
+  &__copyright-txt {
+    opacity: 0.5;
+  }
+
+  #menu-bottom-navigation {
+
+    .menu-item {
+      margin-bottom: 12px;
+    }
+    
+    a {
+      color: var(--color-dark-b1);
+      font-size: var(--txt-body-medium-font-size);
+      line-height: var(--txt-body-medium-line-height);
+      font-weight: var(--txt-body-medium-font-weight);
+      letter-spacing: var(--txt-body-medium-letter-spacing);
+      transition: 500ms ease-in-out;
+
+      &:hover {
+        color: var(--color-brand-blue);
+      }
+    }
+  }
+}

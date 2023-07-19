@@ -1,0 +1,61 @@
+/* Key features section styles */
+.wooks-key-features {
+  position: relative;
+  padding-top: 88px;
+
+  	@include media-breakpoint-down(mb) {
+		padding-top: 44px;
+	}
+
+	&__header {
+		position: relative;
+		width: 952px;
+		margin: 0 auto;
+
+		@include media-breakpoint-down(wd) {
+			width: 100%;
+		}
+	}
+
+	&__items {
+		padding: 48px 0 88px;
+
+		@include media-breakpoint-down(mb) {
+			padding: 36px 0 40px;
+		}
+	}
+
+	&__item-img {
+		height: 60px;
+		width: 60px;
+		margin: 0 auto;
+
+		@include media-breakpoint-down(mb) {
+			height: 48px;
+			width: 48px;
+		}
+	}
+
+	&__item-title {
+		margin-top: 16px !important;
+	}
+
+	&__item-image {
+		height: 100%;
+		width: auto;
+		object-fit: cover;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: 65px;
+		row-gap: 40px;
+
+		@include media-breakpoint-down(mb) {
+			grid-template-columns: 1fr;
+			column-gap: 0;
+			row-gap: 20px;
+		}
+	}
+}

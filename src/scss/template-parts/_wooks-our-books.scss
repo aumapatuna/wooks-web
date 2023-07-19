@@ -1,0 +1,138 @@
+/* Our books section styles */
+.wooks-our-books {
+  position: relative;
+  padding: 60px 0 80px;
+
+  @include media-breakpoint-down(mb) {
+    padding: 0 0 40px;
+    background: none;
+  }
+
+  &__heading {
+
+    @include media-breakpoint-down(mb) {
+      margin-top: 48px !important;
+    }
+  }
+
+  &__items {
+    position: relative;
+    padding-top: 68px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    @include media-breakpoint-up(wd) {
+      width: 1440px;
+    }
+
+    @include media-breakpoint-down(wd) {
+      width: 100%;
+    }
+
+    @include media-breakpoint-down(mb) {
+      padding-top: 36px;
+      width: 100%;
+    }
+  }
+
+  &__slider-item {
+    position: relative;
+    margin: 0 10px;
+    width: 400px !important;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+
+    @include media-breakpoint-down(mb) {
+      margin: 0;
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-top: 24px;
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    &:first-child {
+      
+      @include media-breakpoint-down(mb) {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__slider-wrapper {
+    position: relative;
+    display: flex;
+    //left: 100px;
+    grid-gap: 20px;
+
+    @include media-breakpoint-up(wd) {
+      display: block;
+      //left: 100px;
+    }
+
+    @include media-breakpoint-down(wd) {
+      display: block;
+      left: 20px;
+    }
+
+    @include media-breakpoint-down(mb) {
+      display: block;
+      left: 0;
+    }
+  }
+
+  &__slider-image-wrp {
+    overflow: hidden;
+
+    @include media-breakpoint-down(mb) {
+      width: 100%;
+    }
+
+    img {
+      display: block;
+      transition: 500ms ease-in-out;
+
+      @include media-breakpoint-down(mb) {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+
+  &__language {
+
+    @include media-breakpoint-down(mb) {
+      margin-top: 12px !important;
+    }
+  }
+
+  &__story {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include media-breakpoint-down(mb) {
+      margin-top: 4px !important;
+    }
+  }
+
+  .slick-slide {
+
+    img {
+      display: block;
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+
+      @include media-breakpoint-down(mb) {
+        height: 142px;
+      }
+    }
+  }
+}

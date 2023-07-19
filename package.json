@@ -1,0 +1,32 @@
+{
+  "name": "wooks",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get your application up and running.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Asela",
+  "license": "ISC",
+  "homepage": "",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "browser-sync": "^2.27.10",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-npm-dist": "^1.0.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify-es": "^3.0.0",
+    "lightbox2": "^2.11.3",
+    "sass": "^1.56.1"
+  }
+}

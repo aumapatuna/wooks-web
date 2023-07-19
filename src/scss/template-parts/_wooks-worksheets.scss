@@ -1,0 +1,75 @@
+/* Worksheets section styles */
+.wooks-worksheets {
+  position: relative;
+  padding: 100px 0 0;
+
+  @include media-breakpoint-down(tb) {
+    padding: 40px 0 0;
+  }
+
+  &__items {
+    position: relative;
+    padding-top: 64px;
+
+    @include media-breakpoint-down(tb) {
+      padding-top: 36px;
+    }
+  }
+
+  &__slider-item {
+    position: relative;
+
+    @include media-breakpoint-down(tb) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    @include media-breakpoint-down(tb) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px; 
+    }
+
+    @include media-breakpoint-down(mb) {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+      row-gap: 16px;
+    }
+  }
+
+  &__slider-image-wrp {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    cursor: pointer;
+
+    @include media-breakpoint-down(tb) {
+      width: 100%;
+      height: auto;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      object-fit: cover;
+      transition: 500ms ease-in-out;
+
+      @include media-breakpoint-down(tb) {
+        width: 100%;
+        height: auto;
+      }
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+}

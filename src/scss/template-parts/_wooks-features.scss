@@ -1,0 +1,51 @@
+/* Features section styles */
+.wooks-features {
+  position: relative;
+
+  &__wrap {
+
+    @include media-breakpoint-down(mb) {
+      padding-top: 48px !important;
+    }
+  }
+
+  &__icon-wrp {
+    display: flex;
+    justify-content: center;
+    grid-gap: 100px;
+
+    @include media-breakpoint-up(tb) {
+      grid-gap: 50px;
+      justify-content: space-between;
+    }
+
+    @include media-breakpoint-down(tb) {
+      display: grid;
+      padding-top: 32px !important;
+      padding-bottom: 84px !important;
+      grid-gap: 20px;
+      justify-content: center;
+    }
+  }
+
+  &__icon {
+    height: 80px;
+    width: auto;
+
+    @include media-breakpoint-down(tb) {
+      height: 80px;
+      text-align: center;
+    }
+
+    @include media-breakpoint-down(mb) {
+      height: 80px;
+      text-align: center;
+    }
+  }
+
+  &__icon-img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+  }
+}

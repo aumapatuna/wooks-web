@@ -1,0 +1,62 @@
+/* Modal section styles */
+.wooks-modal {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  height: calc(100vh);
+  width: 100%;
+  background: rgb(0, 0 ,0, 0.9);
+  z-index: 9999;
+  overflow: hidden;
+
+  &__wrap {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 50%;
+    left: 50%;
+    height: auto;
+    width: auto;
+    max-height: calc(80vh);
+    transform: translate(-50%, -50%);
+
+    @include media-breakpoint-down(tb) {
+      width: 500px;
+      height: auto;
+    }
+
+    @include media-breakpoint-down(mb) {
+      width: auto;
+      height: 26%;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 32px;
+    right: 32px;
+    height: 30px;
+    width: 30px;
+    background-image: url('assets/images/modal-close.svg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  &__frame {
+
+    @include media-breakpoint-down(tb) {
+      height: 280px;
+      width: 500px;
+    }
+
+    @include media-breakpoint-down(mb) {
+      height: 100%;
+      width: auto;
+    }
+  }
+}

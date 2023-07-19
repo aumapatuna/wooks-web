@@ -1,0 +1,71 @@
+/* CTA section styles */
+.wooks-cta {
+  position: relative;
+  padding: 100px 0 68px;
+  background: var(--color-blue-one);
+
+  @include media-breakpoint-down(mb) {
+    padding: 80px 0 48px;
+  }
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/images/shapes_bg.svg');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat; 
+    pointer-events: none;
+  }
+
+  &__bg {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('assets/images/sinhala_letters_bg.svg');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+
+    @include media-breakpoint-down(mb) {
+      background-image: none;
+    }
+  }
+
+  &__discription-heading {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 88px;
+
+    @include media-breakpoint-down(mb) {
+      padding: 0;
+    }
+  }
+
+  &__discription-text {
+    max-width: 650px;
+    margin: 24px auto 0;
+  }
+
+  &__form {
+    position: relative;
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+
+    @include media-breakpoint-down(mb) {
+      padding-top: 64px;
+      width: 100%;
+    }
+  } 
+}

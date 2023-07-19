@@ -1,0 +1,153 @@
+/* Welcome pack section styles */
+.wooks-welcome-pack {
+  position: relative;
+  margin-top: 100px;
+  background-color: var(--color-blue-two);
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    bottom: -40px;
+    right: 0;
+    height: 294px;
+    width: 287px;
+    background-image: url('assets/images/welcome-pack/t.svg');
+    background-position: right bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+
+    @include media-breakpoint-down(tb) {
+      display: none;
+    }
+  }
+
+  &__bg-wrp {
+    position: relative;
+  }
+
+  &__bg {
+    position: absolute;
+    display: block;
+    content: "";
+    top: -18px;
+    right: 0;
+    height: 143px;
+    width: 84px;
+    background-image: url('assets/images/welcome-pack/w.svg');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+
+    @include media-breakpoint-down(tb) {
+      display: none;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    @include media-breakpoint-down(tb) {
+      max-width: 100%;
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 0;
+      right: 0;
+      height: 92.4%;
+      width: 67.7%;
+      background-image: url('assets/images/welcome-pack/welcome-pack-bg.svg');
+      background-position: right top;
+      background-size: contain;
+      background-repeat: no-repeat;
+      pointer-events: none;
+
+      @include media-breakpoint-down(tb) {
+        height: 50%;
+        width: 100%;
+        background-position: center center;
+      }
+    } 
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    grid-gap: 105px;
+
+    @include media-breakpoint-down(tb) {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+    }
+  }
+
+  &__image-wrap {
+    width: 625px;
+    overflow: hidden;
+
+    @include media-breakpoint-down(tb) {
+      width: 100%;
+      height: auto;
+      min-height: 375px;
+      grid-row: 2;
+    }
+
+    img {
+      display: block;
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+
+      @include media-breakpoint-down(tb) {
+        min-height: 375px;
+      }
+    }
+  }
+
+  &__details {
+    position: relative;
+    padding: 100px 0;
+    width: 100%;
+
+    @include media-breakpoint-down(wd) {
+      padding-right: 16px;
+    }
+
+    @include media-breakpoint-down(tb) {
+      grid-row: 1;
+      padding: 64px 16px;
+    }
+  }
+
+  &__header {
+    position: relative;
+    top: 50%;
+    left: auto;
+    transform: translateY(-50%);
+    width: 100%;
+    height: auto;
+    max-width: 610px;
+
+    @include media-breakpoint-down(tb) {
+      top: 0;
+      transform: none;
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  &__btn {
+
+    @include media-breakpoint-down(tb) {
+      width: 100%;
+    }
+  }
+}

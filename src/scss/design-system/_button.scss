@@ -1,0 +1,109 @@
+/* Button styles */
+$buttons: (
+  default: (
+    fontSize: 16px,
+    fontWeight: 500,
+    padding: 16px 32px,
+    height: 52px,
+    borderRadius: 8px
+  ),
+  inverse: (
+    fontSize: 16px,
+    fontWeight: 500,
+    padding: 16px 32px,
+    height: 52px,
+    borderRadius: 8px
+  )
+);
+
+button,
+.btn {
+  display: inline-flex;
+  padding: map-deep-get($buttons, "default", "padding");
+  height: map-deep-get($buttons, "default", "height");
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-family: var(--font-family-eudoxus-sans);
+  font-size: map-deep-get($buttons, "default", "fontSize");
+  font-weight: map-deep-get($buttons, "default", "fontWeight");
+  text-transform: unset;
+  appearance: none;
+  background-color: var(--color-brand-blue);
+  border: 1.5px solid var(--color-brand-blue);
+  border-radius: map-deep-get($buttons, "default", "borderRadius");
+  outline: none;
+  transition: 500ms ease-in-out;
+  cursor: pointer;
+  opacity: 1;
+
+  &:hover {
+    color: var(--color-dark-b2rr);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-blue-gray);
+  }
+
+  &--inverse {
+    background-color: var(--color-white);
+    color: var(--color-dark-b2);
+    border: 1px solid var(--color-blue-gray);
+
+    &:hover {
+      background-color: var(--color-brand-blue);
+      color: var(--color-white);
+      border: 1px solid transparent;
+    }
+  }
+}
+
+@each $name, $button in $buttons {
+  .btn--#{$name} {
+    padding: map-get($button, "padding");
+    height: map-get($button, "height");
+    font-size: map-get($button, "fontSize");
+    font-weight: map-get($button, "fontWeight");
+    border-radius: map-get($button, "borderRadius");
+  }
+}
+
+@each $name, $color in $primary-colors {
+  .btn--#{$name} {
+    color: map-get($color, "contrast");
+    background-color: map-get($color, "base");
+
+    &:hover {
+      background-color: darken(map-get($color, "base"), 5%);
+    }
+
+    &:focus {
+      background-color: darken(map-get($color, "base"), 5%);
+      box-shadow: 0 0 0 2px rgba(map-get($color, "base"),.5);
+    }
+
+    &:active {
+      background-color: lighten(map-get($color, "base"), 5%);
+      box-shadow: 0 0 0 2px rgba(map-get($color, "base"),.5);
+    }
+  }
+}
+
+@each $name, $color in $neutral-colors {
+  .btn--#{$name} {
+    color: map-get($color, "contrast");
+    background-color: map-get($color, "base");
+
+    &:hover {
+      background-color: darken(map-get($color, "base"), 5%);
+    }
+
+    &:focus {
+      background-color: darken(map-get($color, "base"), 5%);
+      box-shadow: 0 0 0 2px rgba(map-get($color, "base"),.5);
+    }
+
+    &:active {
+      background-color: lighten(map-get($color, "base"), 5%);
+      box-shadow: 0 0 0 2px rgba(map-get($color, "base"),.5);
+    }
+  }
+}

@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin-top: 0;
+  scroll-behavior: smooth;
+}
+
+/* Page wrapper */
+.ed-wredapper {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 1440px;
+  //max-width: 1366px;
+  overflow-x: hidden;
+  background-color: transparent; // Temporary
+
+  @include media-breakpoint-down(tb) {
+    overflow: hidden;
+  }
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body.menu-fixed {
+  overflow: hidden;
+}
+
+/* Page container */
+.container {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 1240px;
+  background-color: transparent;
+
+  @include media-breakpoint-down(wd) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  @include media-breakpoint-down(tb) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  @include media-breakpoint-down(mb) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+body, 
+html {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+}
+
+html.fixed {
+  overflow: hidden;
+}
+
+h2 {
+
+  br {
+
+    @include media-breakpoint-down(tb) {
+      display: none;
+    }
+  }
+}
+
+.wooks-wrapper {
+  margin-top: 100px;
+  overflow: hidden;
+
+  @include media-breakpoint-down(mb) {
+    margin-top: 85px;
+  }
+
+  &.scrolloffset {
+    scroll-padding-top: 100px;
+  }
+}

@@ -1,0 +1,290 @@
+/* 
+ * color palette
+ */
+
+/* primary colors */
+$brand-blue: #0D73AE;
+$primary-colors: (
+  "brand-blue": (
+    base: $brand-blue,
+    contrast: #ffffff
+  )
+);
+
+/* secondary colors */
+$dark-b2: #151411;
+$dark-b1: #424242;
+$yellow-one: #FFB23F;
+$blue-gray: #64607D;
+$light-gray: #AFADB5;
+$gray-two: #F3F3F3;
+$blue-one: #095995;
+$blue-two: #EFF9FF;
+$error: #FF0053;
+
+$secondary-colors: (
+  "dark-b2": (
+    base: $dark-b2,
+    contrast: #ffffff
+  ),
+  "dark-b1": (
+    base: $dark-b1,
+    contrast: #ffffff
+  ),
+  "yellow-one": (
+    base: $yellow-one,
+    contrast: #ffffff
+  ),
+  "blue-gray": (
+    base: $blue-gray,
+    contrast: #ffffff
+  ),
+  "light-gray": (
+    base: $light-gray,
+    contrast: #ffffff
+  ),
+  "gray-two": (
+    base: $gray-two,
+    contrast: #ffffff
+  ),
+  "blue-one": (
+    base: $blue-one,
+    contrast: #ffffff
+  ),
+  "blue-two": (
+    base: $blue-two,
+    contrast: #ffffff
+  ),
+  "error": (
+    base: $error,
+    contrast: #ffffff
+  )
+);
+
+/* neutral colors */
+$white: #FFFFFF;
+$black: #000000;
+$neutral-colors: (
+  "white": (
+    base: $white,
+    contrast: #ffffff
+  ),
+  "black": (
+    base: $black,
+    contrast: #ffffff
+  )
+);
+
+/* 
+ * Grid configuration
+ */
+$enable-grid-classes: true;
+
+/* 
+ * Grid breakpoints
+ * - Define the minimum dimensions at which your layout will change,
+ * - adapting to different screen sizes, for use in media queries.
+ */
+$grid-breakpoints: (
+  mb: 0,
+  tb: 768px,
+  dt: 1024px,
+  wd: 1200px
+);
+
+/* 
+ * Grid containers
+ * - Define the maximum width of `.container` for different screen sizes.
+ */
+$container-max-widths: (
+  tb: 704px,
+  dt: 920px,
+  wd: 968px
+);
+
+/* 
+ * Grid container paddings
+ * - Define the maximum padding of `.container` for different screen sizes.
+ */
+$container-paddings: (
+  mb: 32px,
+  tb: 16px
+);
+
+/* 
+ * Grid columns
+ * - Set the number of columns and specify the width of the gutters.
+ */
+$grid-columns: 12;
+$grid-gutter-width: 32px;
+$grid-mobile-gutter-width: 16px;
+
+/* 
+ * Spacer
+ * - Set the margin and padding helper classes
+ */
+$spacer-start: 0;
+$spacer-end: 40;
+$spacer-unit: px;
+
+$spacer-important: true;
+$spacer-arithmetic: true;
+$spacer-arithmetic-sequence: 4;
+
+$spacer-directions: (
+  top: t,
+  right: r,
+  bottom: b,
+  left: l
+);
+
+:root {
+  /* colors */
+  --theme-primary-color: #{brand-blue};
+  --theme-default-color: #{$white};
+
+  @each $name, $color in $primary-colors {
+    --color-#{$name}: #{map-get($color, "base")};
+  }
+  @each $name, $color in $neutral-colors {
+    --color-#{$name}: #{map-get($color, "base")};
+  }
+  @each $name, $color in $secondary-colors {
+    --color-#{$name}: #{map-get($color, "base")};
+  }
+
+  /* typography */
+  --font-family-manropeextralight: 'Manrope', sans-serif;
+  --font-family-eudoxus-sans: 'eudoxus sans', sans-serif;
+  --font-family-notosinhala: 'Noto Sans Sinhala', sans-serif;
+  --font-weight: 500;
+  --font-size: 16px;
+  --line-height: 28px;
+  --letter-spacing: 0.2px;
+
+  /* H1 */ 
+  --heading-1-font-size: 64px;
+  --heading-1-font-weight: 800;
+  --heading-1-line-height: 83.2px;
+  --heading-1-letter-spacing: -2%;
+
+  /* H1 - mobile */ 
+  --heading-1-mobile-font-size: 48px;
+  --heading-1-mobile-font-weight: 800;
+  --heading-1-mobile-line-height: 62.4px;
+
+  /* H2 */ 
+  --heading-2-font-size: 48px;
+  --heading-2-font-weight: 800;
+  --heading-2-line-height: 65.57px;
+  --heading-2-letter-spacing: 0.2px;
+
+  /* H2 - mobile */ 
+  --heading-2-mobile-font-size: 28px;
+  --heading-2-mobile-line-height: 38.25px;
+
+  /* H3 */ 
+  --heading-3-font-size: 28px;
+  --heading-3-font-weight: 700;
+  --heading-3-line-height: 40px;
+  --heading-3-letter-spacing: 0;
+
+  /* H4 */ 
+  --heading-4-font-size: 24px;
+  --heading-4-font-weight: 600;
+  --heading-4-line-height: 32px;
+  --heading-4-letter-spacing: 0;
+
+  /* H5 */ 
+  --heading-5-font-size: 20px;
+  --heading-5-font-weight: 600;
+  --heading-5-line-height: 28px;
+  --heading-5-letter-spacing: 0;
+
+  /* H6 */ 
+  --heading-6-font-size: 20px;
+  --heading-6-font-weight: 600;
+  --heading-6-line-height: 28px;
+  --heading-6-letter-spacing: 0;
+
+  /* sub-heading */
+  --heading-sub-font-size: 22px;
+  --heading-sub-font-weight: 700;
+  --heading-sub-line-height: 30.05px;
+  --heading-sub-letter-spacing: 0.2px;
+
+  /* body-one */
+  --txt-body-one-font-size: 16px;
+  --txt-body-one-font-weight: 500;
+  --txt-body-one-line-height: 28px;
+  --txt-body-one-letter-spacing: 0.2px;
+
+  /* body-two */
+  --txt-body-two-font-size: 16px;
+  --txt-body-two-font-weight: 500;
+  --txt-body-two-line-height: 20px;
+  --txt-body-two-letter-spacing: 0;
+
+  /* body-bold */
+  --txt-body-bold-font-size: 16px;
+  --txt-body-bold-font-weight: 700;
+  --txt-body-bold-line-height: 20px;
+  --txt-body-bold-letter-spacing: 0;
+
+  /* body-medium */
+  --txt-body-medium-font-size: 18px;
+  --txt-body-medium-font-weight: 500;
+  --txt-body-medium-line-height: 32px;
+  --txt-body-medium-letter-spacing: 0.2px;
+  
+  /* body-medium-bold */
+  --txt-body-medium-bold-font-size: 18px;
+  --txt-body-medium-bold-font-weight: 700;
+  --txt-body-medium-bold-line-height: 23.4px;
+  --txt-body-medium-bold-letter-spacing: 0;
+
+  /* body-large-bold */
+  --txt-body-large-bold-font-size: 20px;
+  --txt-body-large-bold-font-weight: 700;
+  --txt-body-large-bold-line-height: 25.2px;
+  --txt-body-large-bold-letter-spacing: 0.2px;
+
+  /* sub-heading - mobile */
+  --heading-body-large-bold-mobile-font-size: 16px;
+  --heading-body-large-bold-mobile-font-weight: 700;
+  --heading-body-large-bold-mobile-line-height: 20.16px;
+  --heading-body-large-bold-mobile-letter-spacing: 0.2px;
+
+  /* body-large-bold-two */
+  --txt-body-large-bold-two-font-size: 26px;
+  --txt-body-large-bold-two-font-weight: 700;
+  --txt-body-large-bold-two-line-height: 33.8px;
+  --txt-body-large-bold-two-letter-spacing: 1%;
+
+  /* body-large-bold-two-sinhala */
+  --txt-body-large-bold-two-sinhala-font-size: 26px;
+  --txt-body-large-bold-two-sinhala-font-weight: 700;
+  --txt-body-large-bold-two-sinhala-line-height: 33.8px;
+  --txt-body-large-bold-two-sinhala-letter-spacing: 1%;
+
+  /* body-small */
+  --txt-body-small-font-size: 14px;
+  --txt-body-small-font-weight: 500;
+  --txt-body-small-line-height: 28px;
+  --txt-body-small-letter-spacing: 0.2;
+
+  /* bg-one */ 
+  --txt-bg-one-font-size: 120px;
+  --txt-bg-one-font-weight: 400;
+  --txt-bg-one-line-height: 134px;
+
+  /* bg-two */ 
+  --txt-bg-two-font-size: 421px;
+  --txt-bg-two-font-weight: 400;
+  --txt-bg-two-line-height: 470px;
+
+  /* bg-three */ 
+  --txt-bg-two-font-size: 157px;
+  --txt-bg-two-font-weight: 400;
+  --txt-bg-two-line-height: 175px;
+}

@@ -1,0 +1,53 @@
+/*
+Theme Name: Wooks website
+Theme URI: https://ed.com
+Author: Asela Mapatuna
+Author URI: aumapatuna@gmail.com
+Description: Wooks is a Wordpress theme that can be used for a education websites
+Version: 1.0
+License URI: 
+Text Domain: ed
+*/
+
+@import 'normalize';
+@import 'config';
+
+/* Functions */
+@import 'functions/map-deep-get';
+
+/* Mixin */
+@import 'mixins/breakpoints';
+@import 'mixins/spacer';
+@import 'mixins/grid';
+
+/* Helper classes */
+@import 'helpers/spacer';
+@import 'helpers/flex';
+@import 'helpers/display';
+@import 'helpers/text';
+
+/* Design system */
+@import 'design-system/typography';
+@import 'design-system/color-palette';
+@import 'design-system/button';
+@import 'design-system/form-control';
+@import 'design-system/listing';
+
+/* Base */
+@import 'base';
+
+/* Template parts */ 
+@import 'template-parts/header';
+@import 'template-parts/footer';
+@import 'template-parts/wooks-features';
+@import 'template-parts/wooks-cta';
+@import 'template-parts/wooks-hero';
+@import 'template-parts/wooks-key-features';
+@import 'template-parts/wooks-how-we-help';
+@import 'template-parts/wooks-testimonials';
+@import 'template-parts/wooks-our-kids';
+@import 'template-parts/wooks-welcome-pack';
+@import 'template-parts/wooks-worksheets';
+@import 'template-parts/wooks-our-books';
+
+@import 'template-parts/page-assets/wooks-modal';
